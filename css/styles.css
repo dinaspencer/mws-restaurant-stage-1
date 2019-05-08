@@ -142,6 +142,8 @@ nav h1 a {
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
   margin: 15px;
+  margin-left: auto;
+  margin-right: auto;
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
@@ -189,12 +191,29 @@ nav h1 a {
   margin-top: 40px;
 }
 
-
-.filter-options select {
-  margin-left: auto;
-  margin-right: auto;
+.filter-options {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.filter-options select {
+  height: 40px;
+}
+
+}
+
+@media screen and (min-width: 800px) {
+
+#restaurants-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#restaurants-list li {
+  max-width: 40%;
 }
 
 /* ====================== Restaurant Details ====================== */
