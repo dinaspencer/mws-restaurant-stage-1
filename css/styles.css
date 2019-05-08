@@ -145,7 +145,7 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  width: 80%;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -180,6 +180,21 @@ nav h1 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+/* *** MEDIA QUERIES FOR RESPONSIVENESS INDEX.HTML *** */
+@media screen and (max-width: 499px) {
+
+#restaurants-list {
+  margin-top: 40px;
+}
+
+
+.filter-options select {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 }
 
 /* ====================== Restaurant Details ====================== */
