@@ -21,10 +21,19 @@ a {
 	color: orange;
 	text-decoration: none;
 }
-a:hover, a:focus {
+a:hover {
 	color: #3397db;
 	text-decoration: none;
 }
+
+a:focus {
+  border: 1px solid blue;
+}
+
+select:focus {
+  border: 1px solid blue;
+}
+
 a img{
 	border: none 0px #fff;
 }
@@ -197,11 +206,7 @@ nav h1 {
   margin-top: 40px;
 }
 
-#restaurants-list li img {
-  max-width: 100%;
-  max-height: 60%;
-  padding: 0;
-}
+
 
 .filter-options {
   height: 120px;
@@ -260,6 +265,7 @@ nav h1 {
   font-weight: 200;
   letter-spacing: 0;
   margin: 15px 0 30px;
+  margin-top: 50px;
   text-transform: uppercase;
   line-height: 1.1;
 }
@@ -319,3 +325,28 @@ nav h1 {
 #restaurant-hours td {
   color: #666;
 }
+
+
+/* **** MOBILE RESPONSIVE FOR RESTAURANT.HTML ** */
+
+@media screen and (max-width: 799px){
+
+#restaurant-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#restaurant-name {
+  color: #f18200;
+  font-family: Arial,sans-serif;
+  font-size: 20pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  margin: 15px 0 30px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+
+} 
