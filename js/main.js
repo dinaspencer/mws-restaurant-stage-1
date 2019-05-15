@@ -218,3 +218,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+
+/* **** Service worker script **** */
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('/sw.js')
+  .catch(function(err) {
+    console.error(err);
+  });
+}
+
