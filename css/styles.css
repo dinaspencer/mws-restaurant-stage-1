@@ -254,8 +254,6 @@ nav h1 {
   z-index: 1000;
 }
 
-
-
 .inside #map {
   background-color: #ccc;
   height: 100%;
@@ -263,7 +261,6 @@ nav h1 {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
   width: 50%;
 }
 #restaurant-name {
@@ -325,6 +322,10 @@ nav h1 {
 -moz-box-shadow: 10px 10px 14px 1px rgba(89,75,89,1);
 box-shadow: 10px 10px 14px 1px rgba(89,75,89,1);
 }
+
+#reviews-list li last-child {
+  margin-bottom: 50px;
+}
 #reviews-list li p {
   margin: 0 0 10px;
   text-align: justify;
@@ -365,7 +366,10 @@ box-shadow: 10px 10px 14px 1px rgba(89,75,89,1);
   max-width: 90%;
 }
 
-
+.inside #footer {
+  margin-top: 50px;
+  width: 100%;
+}
 
 } 
 
