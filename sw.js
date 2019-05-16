@@ -3,10 +3,6 @@ console.log('Hello, service worker registered!');
 
 /* With help from Matthew Crawford´s tutorial I implemented the service worker.*/
 
-self.addEventListener('install', function(e) {
-
-});
-
 
 const filesForCache = [
 	'/',
@@ -40,23 +36,26 @@ self.addEventListener('install', function(e) {
 
 self.addEventListener('fetch', function(e){
 	e.respondWith(
-		caches.match(e.request).then(function(response){
+		caches.match(e.request)
+		.then(function(response){
 			if(response){
 				console.log('Found', e.request, ' in cache');
 				return response;
 			}
-			else {
-				console.log('Couldnt find ', e.request, ' in cache, fetching...');
+		
 				return fetch(e.request)
 				.then(function(response) {
+					if(!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
 					const clonedResponse = response.clone();
 					caches.open('v1').then(function(cache) {
 						cache.put(e.request, clonedResponse);
-					})
+					});
 					return response;
-				})
+				}
+				);
 					
-			}
 		})
 		);
 });
