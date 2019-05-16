@@ -1,5 +1,8 @@
 console.log('Hello, service worker registered!');
 
+
+/* With help from Matthew Crawford´s tutorial I implemented the service worker.*/
+
 self.addEventListener('install', function(e) {
 
 });
